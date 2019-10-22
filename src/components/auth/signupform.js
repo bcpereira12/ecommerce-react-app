@@ -9,21 +9,18 @@ import history from "../../history";
 class Signupform extends Component {
   render() {
     const { className, handleSubmit } = this.props;
-    const links = [
+    const info = [
       {
         _id: 0,
-        title: "Not Registered? Create account here",
-        onClick: () => history.push("/signup")
+        title: "At least 6 characters"
       },
       {
         _id: 1,
-        title: "Forgot account email?",
-        onClick: () => console.log("forgot email")
+        title: "At least one number"
       },
       {
         _id: 2,
-        title: "Forgot  password?",
-        onClick: () => console.log("forgot password")
+        title: "At least one symbol"
       }
     ];
     return (
@@ -56,7 +53,7 @@ class Signupform extends Component {
         />
 
         <Field
-          className="sign-up-form__confirm-password"
+          className="sign-up-form__confirm"
           type="password"
           title="Confirm Password"
           placeholder="Confirm Password"
@@ -68,16 +65,16 @@ class Signupform extends Component {
 
         <Field
           className="sign-up-form__login"
-          onClick={() => console.log("trying to submit")}
+          onClick={() => history.push("/shop")}
           type="submit"
-          title="Login"
+          title="Create Account"
           name="login"
           component={FormButton}
         />
 
         <Field
           className="sign-up-form__back"
-          onClick={() => console.log("trying to go back")}
+          onClick={() => history.push("/signin")}
           type="button"
           title="Back"
           name="back"
@@ -87,8 +84,8 @@ class Signupform extends Component {
 
         <Details
           className="sign-up-form__details"
-          title="QuickLinks"
-          links={links}
+          title="Password Requirements"
+          info={info}
         />
       </form>
     );
