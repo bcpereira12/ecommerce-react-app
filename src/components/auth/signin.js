@@ -3,7 +3,15 @@ import React, { Component } from "react";
 import Signinform from "./signinform";
 import PageTitle from "../PageTitle";
 
+import { connect } from "react-redux";
+import * as actions from "../../actions";
+
 class Signin extends Component {
+  componentDidMount() {
+    this.props.setHeaderLinks([]);
+    this.props.setNavbarLinks([]);
+  }
+
   onSubmit = fields => {
     console.log(fields);
   };
@@ -17,5 +25,10 @@ class Signin extends Component {
     );
   }
 }
+
+Signin = connect(
+  null,
+  actions
+)(Signin);
 
 export default Signin;
