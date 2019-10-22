@@ -65,7 +65,7 @@ class Signupform extends Component {
 
         <Field
           className="sign-up-form__login"
-          onClick={() => history.push("/shop")}
+          onClick={() => history.push("/account")}
           type="submit"
           title="Create Account"
           name="login"
