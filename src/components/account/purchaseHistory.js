@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 
-class Purchaseistory extends Component {
+class PurchaseHistory extends Component {
   render() {
-    return <div>Purchase History</div>;
+    return <div>Purchase hist</div>;
   }
 }
 
-export default Purchasehistory;
+export default PurchaseHistory;
