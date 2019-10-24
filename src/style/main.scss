@@ -19,9 +19,16 @@ body {
 @import "headernavbar";
 @import "page-title";
 @import "form-fields";
+@import "details";
+
+//AUTH
 @import "auth/signin";
 @import "auth/signup";
-@import "details";
+
+//ACCOUNT
 @import "account/purchase-history";
 @import "account/account-information";
 @import "account/account";
+
+//SHOP
+@import "shop/shop";
