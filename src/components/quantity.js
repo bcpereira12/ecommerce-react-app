@@ -5,13 +5,13 @@ class Quantity extends Component {
     const { className, quantity } = this.props;
     return (
       <div className={`${className} quantity`}>
-        <div className="quanity__count">{quantity}</div>
+        <div className="quantity__count">{quantity}</div>
 
-        <div className="quanity__plus">
+        <div className="quantity__plus">
           <i className="fas fa-plus"></i>
         </div>
 
-        <div className="quanity__minus">
+        <div className="quantity__minus">
           <i className="fas fa-minus"></i>
         </div>
       </div>
