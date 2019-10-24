@@ -24,7 +24,7 @@ class ShopSearchBar extends Component {
         <Field
           name="query"
           className="shop-search-bar__form-search-bar"
-          placeholder="search"
+          placeholder="Search"
           component={FormSearchBar}
         />
       </form>
