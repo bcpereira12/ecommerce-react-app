@@ -16,7 +16,7 @@ export function setNavbarLinks(links, onClick) {
     type: SET_NAVBAR_LINKS,
     payload: {
       links,
-      OnonClick: onClick ? onClick : ""
+      onClick: onClick ? onClick : ""
     }
   };
 }

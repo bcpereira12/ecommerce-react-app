@@ -1,12 +1,13 @@
 import {
+  SET_NAVBAR_LINKS,
   SET_SHOP_CATEGORIES,
   SET_SHOP_PRODUCTS,
-  FILTER_PRODUCTS_WITH_ID
+  FILTER_PRODUCTS_WITH_CATEGORY_ID
 } from "./types";
 
-export function filterProductWithCategoryId(_id) {
+export function filterProductsWithCategoryId(_id) {
   return {
-    type: FILTER_PRODUCTS_WITH_ID,
+    type: FILTER_PRODUCTS_WITH_CATEGORY_ID,
     payload: _id
   };
 }
