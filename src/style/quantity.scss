@@ -14,6 +14,14 @@
     width: 29px;
     grid-column: m/e;
   }
+
+  &__plus,
+  &__minus {
+    cursor: pointer;
+    &:active {
+      transform: translateY(1px);
+    }
+  }
   &__count {
     grid-row: s/e;
     grid-column: s/m;
@@ -26,11 +34,9 @@
   &__plus {
     grid-row: s/m;
     border-radius: 0 3px 0 0;
-    cursor: pointer;
   }
   &__minus {
     grid-row: m/e;
     border-radius: 0 0 3px 0;
-    cursor: pointer;
   }
 }
