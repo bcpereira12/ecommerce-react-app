@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import CartProduct from "./cartProduct";
 
 function CartButton({ className, icon }) {
   return (
@@ -13,7 +14,6 @@ function CartFooter({ className, products }) {
   return (
     <div className={`${className} cart-footer`}>
       <a className="cart-footer__checkout">Checkout </a>
-
       <div className="cart-footer__subtotal">Subtotal</div>
       <div className="cart-footer__price">${price}</div>
     </div>
@@ -22,7 +22,7 @@ function CartFooter({ className, products }) {
 
 function CartContent({ className, products }) {
   let count = products.length;
-  let productsJSX = products.map(product => <h1 key={product}>{product}</h1>);
+  let productsJSX = products.map(product => <CartProduct key={product} />);
 
   return (
     <div className={`${className} cart-content`}>
@@ -41,29 +41,7 @@ class ShopCart extends Component {
     return (
       <div className={`${className} shop-cart`}>
         <CartButton className="shop-cart__toggle" icon="fas fa-times" />
-        <CartContent
-          className="shop-cart__content"
-          products={[
-            4,
-            5,
-            6,
-            5,
-            564,
-            5648,
-            89798,
-            54,
-            589,
-            4,
-            5,
-            6,
-            5,
-            564,
-            5648,
-            89798,
-            54,
-            589
-          ]}
-        />
+        <CartContent className="shop-cart__content" products={[4, 5, 6, 564]} />
       </div>
     );
   }
