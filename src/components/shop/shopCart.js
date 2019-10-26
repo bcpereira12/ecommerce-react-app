@@ -8,7 +8,10 @@ import CartButton from "./cartButton";
 import history from "../../history";
 
 function CartFooter({ className, products }) {
-  const price = 7.96;
+  let subtotal = 0;
+  products.map(cartProduct => {
+    subtotal += cartProduct.quantity * cartProduct.product.price;
+  });
   return (
     <div className={`${className} cart-footer`}>
       <a
@@ -18,7 +21,7 @@ function CartFooter({ className, products }) {
         Checkout{" "}
       </a>
       <div className="cart-footer__subtotal">Subtotal</div>
-      <div className="cart-footer__price">${price}</div>
+      <div className="cart-footer__price">${subtotal}</div>
     </div>
   );
 }
