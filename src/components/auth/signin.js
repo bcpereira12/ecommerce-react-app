@@ -1,34 +1,35 @@
 import React, { Component } from "react";
 
-import Signinform from "./signinform";
+import SigninForm from "./signinForm";
 import PageTitle from "../pageTitle";
 
 import { connect } from "react-redux";
 import * as actions from "../../actions";
 
-class Signin extends Component {
+class SignIn extends Component {
   componentDidMount() {
     this.props.setHeaderLinks([]);
     this.props.setNavbarLinks([]);
   }
 
   onSubmit = fields => {
-    console.log(fields);
+    this.props.signIn(fields);
+    this.props.history.push("/account");
   };
 
   render() {
     return (
       <div className="sign-in">
         <PageTitle className="sign-in__page-title" title="Login" />
-        <Signinform onSubmit={this.onSubmit} className="sign-in__form" />
+        <SigninForm onSubmit={this.onSubmit} className="sign-in__form" />
       </div>
     );
   }
 }
 
-Signin = connect(
+SignIn = connect(
   null,
   actions
-)(Signin);
+)(SignIn);
 
-export default Signin;
+export default SignIn;

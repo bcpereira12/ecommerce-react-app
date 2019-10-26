@@ -78,9 +78,11 @@ class PaymentForm extends Component {
             className="shipping-info__title"
             title="Shipping To"
           />
-          <div className="shipping-info__name small-text">Jordan Hudgens</div>
+          <div className="shipping-info__name small-text">
+            {this.props.name}
+          </div>
           <div className="shipping-info__address small-text">
-            1234 address goes here
+            {this.props.address}
           </div>
         </div>
       </form>
@@ -91,5 +93,13 @@ class PaymentForm extends Component {
 PaymentForm = reduxForm({
   form: "PaymentForm"
 })(PaymentForm);
+
+/*
+function mapStateToProps(state) {
+  const { name, address } = state.user.user;
+  return { name, address };
+}
+
+PaymentForm = connect(mapStateToProps)(PaymentForm);*/
 
 export default PaymentForm;
