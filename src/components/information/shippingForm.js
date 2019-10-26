@@ -43,7 +43,7 @@ class ShippingForm extends Component {
           className="shipping-form__state"
           type="state"
           title="State"
-          placeholder="this.state."
+          placeholder="State"
           name="state"
           component={FormInput}
         />
