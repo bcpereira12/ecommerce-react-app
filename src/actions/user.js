@@ -31,7 +31,8 @@ export function fetchCartProducts() {
           description:
             "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, ",
           price: "1.99",
-          belongsTo: [0, 1]
+          belongsTo: [0, 1],
+          imageUrl: "http://via.placeholder.com/80x80"
         },
         quantity: 2
       },
@@ -43,7 +44,8 @@ export function fetchCartProducts() {
           description:
             "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,  ",
           price: "1.99",
-          belongsTo: [0, 5]
+          belongsTo: [0, 5],
+          imageUrl: "http://via.placeholder.com/80x80"
         },
         quantity: 1
       }
