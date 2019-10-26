@@ -1,7 +1,7 @@
 import React from "react";
 
 export function UnderlinedTitle({ className, title }) {
-  return <div className={`${className} UnderlinedTitle`}>{title}</div>;
+  return <div className={`${className} underlined-title`}>{title}</div>;
 }
 
 export function InfoTitle({ className, title, value }) {
